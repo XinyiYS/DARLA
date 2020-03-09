@@ -64,9 +64,9 @@ class BetaVAE():
                 save_image(pic, 'img/betaVae_' + str(epoch+1) + '_epochs.png')
 
             if epoch % self.save_model_iter == 0:
-                checkpoint_path = os.path.join"betaVae_model_{}_epochs"
+                checkpoint_path = "betaVae_model_{}_epochs".format(epoch)
                 checkpoint_path = os.path.join(betaVae_model_dir, checkpoint_path)
-                utils.save_checkpoint(Model(), self.vae, checkpoint_path)
+                utils.save_checkpoint(Model, self.vae, checkpoint_path)
             
             # plot loss
             update_viz(epoch, loss.item())

@@ -56,9 +56,9 @@ class DAE():
                 save_image(pic, 'img/dae_' + str(epoch+1) + '_epochs.png')
             
             if epoch % self.save_model_iter == 0:
-                checkpoint_path = "dae_model_{}_epochs"
+                checkpoint_path = "dae_model_{}_epochs".format(epoch)
                 checkpoint_path = os.path.join(dae_model_dir, checkpoint_path)
-                utils.save_checkpoint(Model(), self.dae, checkpoint_path)
+                utils.save_checkpoint(Model, self.dae, checkpoint_path)
 
             # plot loss
             update_viz(epoch, loss.item())
