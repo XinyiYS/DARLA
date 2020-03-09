@@ -31,7 +31,7 @@ transformation = transforms.Compose([
     transforms.ToTensor()
 ])
 
-dataset = MNIST('data', transform=transformation)
+dataset = MNIST('data', transform=transformation, download=True)
 dataloader = DataLoader(dataset, batch_size=1, shuffle=True)
 
 for data in dataloader:
