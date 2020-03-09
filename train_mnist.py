@@ -9,6 +9,7 @@ from dae.dae import DAE
 from beta_vae.beta_vae import BetaVAE
 from history import History
 import utils
+
 # hyperparameters
 num_epochs = 10000
 batch_size = 128
